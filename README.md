@@ -1,1 +1,1 @@
-# broker-mobile-app
+# lit-mobile-app
