@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAuth } from '../../core';
+import { useAuth } from '@/core';
 import { LoginForm } from './login-form';
 
 export const Login = () => {

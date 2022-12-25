@@ -1,4 +1,5 @@
 export * from './home';
 export * from './login';
-export * from './profile';
-export * from './settings';
+export * from './chat';
+export * from './bookmark';
+export * from './property';

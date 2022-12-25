@@ -16,7 +16,10 @@ plugins.push(
   'react-native-reanimated/plugin',
 )
 
-module.exports = {
-  presets,
-  plugins,
-}
+module.exports = function (api) {
+  api.cache(true);
+  return {
+    presets,
+    plugins,
+  };
+ };
