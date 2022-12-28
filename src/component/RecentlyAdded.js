@@ -1,9 +1,10 @@
 import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native";
 import React from "react";
-import { recentlyAddedData } from "@/constants/mocks";
 import INRSignSolidSVG from '@/assets/icons/inr-sign-solid.svg';
+import { useRecentlyAddedProperties } from "@/api";
 
 const RecentlyAdded = ({ props }) => {
+  const { data, isLoading } = useRecentlyAddedProperties();
   return (
     <View style={{ marginTop: 20, marginBottom: 10 }}>
       {/* Tile Header */}
@@ -25,7 +26,8 @@ const RecentlyAdded = ({ props }) => {
       {/* Properties data tiles */}
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <View style={{ flexDirection: "row", marginTop: 10 }}>
-          {recentlyAddedData.map((item) => {
+          { isLoading && (<Text style={{ color: "#025A63", fontWeight: "800" }}>Fetching...</Text>) }
+          { !isLoading && data.map((item) => {
             return (
               <View
                 key={item.id}

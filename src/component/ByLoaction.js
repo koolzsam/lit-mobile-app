@@ -1,8 +1,9 @@
 import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native";
 import React from "react";
-import { byLocationdata } from "@/constants/mocks";
+import { usePropertyLocations } from "@/api";
 
 const ByLocation = () => {
+  const { data, isLoading } = usePropertyLocations();
   return (
     <View style={{ marginTop: 20, marginBottom: 10 }}>
       {/* Tile Header */}
@@ -22,7 +23,8 @@ const ByLocation = () => {
       {/* Properties data tiles */}
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <View style={{ flexDirection: "row", marginTop: 10 }}>
-          {byLocationdata.map((item) => {
+          { isLoading && (<Text style={{ color: "#025A63", fontWeight: "800" }}>Fetching Properties...</Text>) }
+          { !isLoading && data.map((item) => {
             return (
               <View
                 key={item.id}
