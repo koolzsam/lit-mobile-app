@@ -17,9 +17,6 @@ export const Home = (props) => {
         {/* User Greetings */}
         <UserGreetings />
 
-        {/* Location */}
-        <UserLocation />
-
         {/* Search Bar */}
         <Search />
 

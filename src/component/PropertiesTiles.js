@@ -6,9 +6,10 @@ import {
   ScrollView,
 } from "react-native";
 import React from "react";
-import { propertiesData } from "@/constants/mocks";
+import { usePropertyCategories } from "@/api";
 
 const PropertiesTiles = () => {
+  const { data, isLoading } = usePropertyCategories();
   return (
     <View style={{ marginTop: 20, marginBottom: 10 }}>
       {/* Tile Header */}
@@ -30,7 +31,8 @@ const PropertiesTiles = () => {
       {/* Properties data tiles */}
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <View style={{ flexDirection: "row", marginTop: 10 }}>
-          {propertiesData.map((item) => {
+          {isLoading && (<Text style={{ color: "#025A63", fontWeight: "800" }}>Fetching Properties...</Text>)}
+          { !isLoading && data.map((item) => {
             return (
               <View
                 key={item.id}
