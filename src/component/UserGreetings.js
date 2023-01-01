@@ -12,7 +12,7 @@ const UserGreetings = () => {
             color: "#000",
           }}
         >
-          Hi Divesh
+          Hi Divesh G
         </Text>
       </View>
     </View>

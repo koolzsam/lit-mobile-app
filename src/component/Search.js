@@ -19,7 +19,7 @@ const Search = () => {
           borderColor: "#d7d7d7",
         }}
       >
-        <SearchIconSVG width={24} height={24} fill="#454545"/>
+        <SearchIconSVG width={24} height={24} fill="#454545" />
         <TextInput
           placeholder="Search property"
           style={{
@@ -27,6 +27,7 @@ const Search = () => {
             fontSize: 16,
             paddingRight: 10,
             flex: 1,
+            color: '#000'
           }}
         />
       </View>
