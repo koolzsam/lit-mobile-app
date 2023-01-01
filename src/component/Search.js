@@ -12,7 +12,7 @@ const Search = () => {
           alignItems: "center",
           backgroundColor: "#e5e5e5",
           padding: 10,
-          borderRadius: 15,
+          borderRadius: 12,
           marginTop: 15,
           borderWidth: 1,
           borderStyle: "solid",
