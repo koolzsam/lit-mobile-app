@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native";
 import React from "react";
 import INRSignSolidSVG from '@/assets/icons/inr-sign-solid.svg';
 import { useRecentlyAddedProperties } from "@/api";
+import { theme } from "@/App";
 
 const RecentlyAdded = ({ props }) => {
   const { data, isLoading } = useRecentlyAddedProperties();
@@ -15,9 +16,11 @@ const RecentlyAdded = ({ props }) => {
           justifyContent: "space-between",
         }}
       >
-        <Text style={{ fontSize: 20, fontWeight: "800" }}>
+
+        <Text style={{ fontSize: 20, fontWeight: "600", color: theme.colors.textDark }}>
           Recently added properties
         </Text>
+
         <TouchableOpacity>
           <Text style={{ color: "#025A63", fontWeight: "800" }}>See All</Text>
         </TouchableOpacity>
@@ -26,8 +29,8 @@ const RecentlyAdded = ({ props }) => {
       {/* Properties data tiles */}
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <View style={{ flexDirection: "row", marginTop: 10 }}>
-          { isLoading && (<Text style={{ color: "#025A63", fontWeight: "800" }}>Fetching...</Text>) }
-          { !isLoading && data.map((item) => {
+          {isLoading && (<Text style={{ color: "#025A63", fontWeight: "800" }}>Fetching...</Text>)}
+          {!isLoading && data.map((item) => {
             return (
               <View
                 key={item.id}
@@ -35,9 +38,9 @@ const RecentlyAdded = ({ props }) => {
                   marginRight: 10,
                 }}
               >
-                <TouchableOpacity
+                <TouchableOpacity rippleColor="rgba(120, 0, 0, .32)"
                   onPress={() => {
-                    props.navigation.navigate("Home", { screen : "PropertyDetailsScreen"});
+                    props.navigation.navigate("Home", { screen: "DetailsScreen" });
                   }}
                 >
                   <Image
@@ -58,7 +61,7 @@ const RecentlyAdded = ({ props }) => {
                     <View
                       style={{ flexDirection: "row", alignItems: "center" }}
                     >
-                      <INRSignSolidSVG width={16} height={16} fill="black"/>
+                      <INRSignSolidSVG width={16} height={16} fill="black" />
                       <Text
                         style={{
                           color: "#000",

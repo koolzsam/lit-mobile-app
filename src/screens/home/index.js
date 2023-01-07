@@ -3,12 +3,11 @@ import {
   ScrollView,
 } from "react-native";
 import React from "react";
-import PropertiesTiles from "@/component/PropertiesTiles";
-import ByLocation from "@/component/ByLoaction";
-import RecentlyAdded from "@/component/RecentlyAdded";
-import Search from "@/component/Search";
-import UserGreetings from "@/component/UserGreetings";
-import UserLocation from "@/component/UserLocation";
+import SelectProperties from "@/component/Home/SelectProperties";
+import ByLocation from "@/component/Home/ByLoaction";
+import RecentlyAdded from "@/component/Home/RecentlyAdded";
+import Search from "@/component/Home/Search";
+import UserGreetings from "@/component/Home/UserGreetings";
 
 export const Home = (props) => {
   return (
@@ -18,10 +17,10 @@ export const Home = (props) => {
         <UserGreetings />
 
         {/* Search Bar */}
-        <Search />
+        <Search props={props} />
 
         {/* Properties Types */}
-        <PropertiesTiles />
+        <SelectProperties />
 
         {/* By Location */}
         <ByLocation />

@@ -7,8 +7,9 @@ import {
 } from "react-native";
 import React from "react";
 import { usePropertyCategories } from "@/api";
+import { theme } from "@/App";
 
-const PropertiesTiles = () => {
+const SelectProperties = () => {
   const { data, isLoading } = usePropertyCategories();
   return (
     <View style={{ marginTop: 20, marginBottom: 10 }}>
@@ -20,7 +21,7 @@ const PropertiesTiles = () => {
           justifyContent: "space-between",
         }}
       >
-        <Text style={{ fontSize: 20, fontWeight: "800" }}>
+        <Text style={{ fontSize: 20, fontWeight: '600', color: theme.colors.textDark }}>
           Select properties
         </Text>
         <TouchableOpacity>
@@ -32,7 +33,7 @@ const PropertiesTiles = () => {
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <View style={{ flexDirection: "row", marginTop: 10 }}>
           {isLoading && (<Text style={{ color: "#025A63", fontWeight: "800" }}>Fetching Properties...</Text>)}
-          { !isLoading && data.map((item) => {
+          {!isLoading && data.map((item) => {
             return (
               <View
                 key={item.id}
@@ -89,4 +90,4 @@ const PropertiesTiles = () => {
   );
 };
 
-export default PropertiesTiles;
+export default SelectProperties;

@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native";
 import React from "react";
 import { usePropertyLocations } from "@/api";
+import { theme } from "@/App";
 
 const ByLocation = () => {
   const { data, isLoading } = usePropertyLocations();
@@ -14,7 +15,7 @@ const ByLocation = () => {
           justifyContent: "space-between",
         }}
       >
-        <Text style={{ fontSize: 20, fontWeight: "800" }}>By locations</Text>
+        <Text style={{ fontSize: 20, fontWeight: "600", color: theme.colors.textDark }}>By locations</Text>
         <TouchableOpacity>
           <Text style={{ color: "#025A63", fontWeight: "800" }}>See All</Text>
         </TouchableOpacity>
@@ -23,8 +24,8 @@ const ByLocation = () => {
       {/* Properties data tiles */}
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <View style={{ flexDirection: "row", marginTop: 10 }}>
-          { isLoading && (<Text style={{ color: "#025A63", fontWeight: "800" }}>Fetching Properties...</Text>) }
-          { !isLoading && data.map((item) => {
+          {isLoading && (<Text style={{ color: "#025A63", fontWeight: "800" }}>Fetching Properties...</Text>)}
+          {!isLoading && data.map((item) => {
             return (
               <View
                 key={item.id}
