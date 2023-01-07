@@ -3,9 +3,11 @@ import React from 'react'
 import { hydrateAuth } from "@/core";
 import { RootNavigator } from "@/navigators";
 import { APIProvider } from '@/api';
-import 'react-native-gesture-handler';
 import { Provider as PaperProvider, MD3LightTheme as DefaultTheme, } from 'react-native-paper';
 
+import {
+  GestureHandlerRootView,
+} from 'react-native-gesture-handler';
 hydrateAuth();
 
 export const theme = {
@@ -21,11 +23,13 @@ export const theme = {
 };
 
 const App = () => (
-  <PaperProvider>
-    <APIProvider>
-      <RootNavigator />
-    </APIProvider>
-  </PaperProvider>
+  <GestureHandlerRootView style={{ flex: 1 }}>
+    <PaperProvider>
+      <APIProvider>
+        <RootNavigator />
+      </APIProvider>
+    </PaperProvider>
+  </GestureHandlerRootView>
 );
 
 export default App
