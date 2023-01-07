@@ -1,5 +1,8 @@
 import create from 'zustand';
 
+const MIN_DEFAULT = 0;
+const MAX_DEFAULT = 500;
+
 /**
  * Custom hook to store the filter details
  * all filter components will use the relavant
@@ -10,7 +13,7 @@ import create from 'zustand';
 export const useFilter = create((set, get) => ({
     locations: [],
     propertyTypes: [],
-    priceRange: [],
+    priceRange: [MIN_DEFAULT, MAX_DEFAULT],
     setLocations: (locations) => {
         set({ locations });
     },
