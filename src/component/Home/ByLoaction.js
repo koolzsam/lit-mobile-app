@@ -6,7 +6,7 @@ import { theme } from "@/App";
 const ByLocation = () => {
   const { data, isLoading } = usePropertyLocations();
   return (
-    <View style={{ marginTop: 20, marginBottom: 10 }}>
+    <View style={{ marginTop: 20, marginBottom: 20 }}>
       {/* Tile Header */}
       <View
         style={{
@@ -31,6 +31,7 @@ const ByLocation = () => {
                 key={item.id}
                 style={{
                   marginRight: 10,
+                  width: 160,
                 }}
               >
                 <TouchableOpacity>
@@ -38,9 +39,9 @@ const ByLocation = () => {
                     source={item.image}
                     resizeMode="cover"
                     style={{
-                      width: 187,
-                      height: 110,
-                      borderRadius: 10,
+                      width: '100%',
+                      height: 80,
+                      borderRadius: 6,
                       justifyContent: "flex-end",
                     }}
                   />
@@ -53,7 +54,7 @@ const ByLocation = () => {
                       style={{
                         color: "#000",
                         fontWeight: "800",
-                        fontSize: 16,
+                        fontSize: 15,
                       }}
                     >
                       {item.name}

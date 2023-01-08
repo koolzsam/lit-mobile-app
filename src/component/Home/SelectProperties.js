@@ -12,7 +12,7 @@ import { theme } from "@/App";
 const SelectProperties = () => {
   const { data, isLoading } = usePropertyCategories();
   return (
-    <View style={{ marginTop: 20, marginBottom: 10 }}>
+    <View style={{ marginTop: 20, marginBottom: 20 }}>
       {/* Tile Header */}
       <View
         style={{
@@ -41,6 +41,7 @@ const SelectProperties = () => {
                   borderRadius: 10,
                   overflow: "hidden",
                   marginRight: 10,
+                  width: 200,
                 }}
               >
                 <TouchableOpacity>
@@ -51,7 +52,6 @@ const SelectProperties = () => {
                       overlayColor: "#000",
                     }}
                     style={{
-                      width: 187,
                       height: 110,
                       justifyContent: "flex-end",
                     }}
@@ -71,7 +71,7 @@ const SelectProperties = () => {
                         style={{
                           color: "#fff",
                           fontWeight: "800",
-                          fontSize: 16,
+                          fontSize: 15,
                           paddingBottom: 10,
                           paddingHorizontal: 20,
                         }}

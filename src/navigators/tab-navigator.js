@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from "react";
 
-import { BookmarkScreen, Home, ChatScreen, DetailsScreen, SearchScreen } from "@/screens";
+import { BookmarkScreen, Home, ChatScreen, DetailsScreen, SearchScreen, SearchResultScreen } from "@/screens";
 import HomeSolidSVG from '@/assets/icons/home-solid.svg';
 import ChatSVG from '@/assets/icons/chat.svg';
 import BookmarkSVG from '@/assets/icons/bookmark.svg';
@@ -29,6 +29,10 @@ export const HomeStack = () => {
       <Stack.Screen
         name="SearchScreen"
         component={SearchScreen}
+      />
+      <Stack.Screen
+        name="SearchResultScreen"
+        component={SearchResultScreen}
       />
     </Stack.Navigator>
   );

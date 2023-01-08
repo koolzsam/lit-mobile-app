@@ -66,6 +66,7 @@ const recentlyAddedData = [
     price: "12,000",
     caption: "3 BHK independent house",
     size: "2500 sq.ft.",
+    location: 'Vijay Nagar, indore',
     image: require("../assets/images/RecentlyAdded/image-1.jpg"),
   },
   {
@@ -73,6 +74,7 @@ const recentlyAddedData = [
     price: "15,000",
     caption: "2 BHK independent house",
     size: "1200 sq.ft.",
+    location: 'Vijay Nagar, indore',
     image: require("../assets/images/RecentlyAdded/image-2.jpg"),
   },
   {
@@ -80,6 +82,7 @@ const recentlyAddedData = [
     price: "17,000",
     caption: "4 BHK independent house",
     size: "3200 sq.ft.",
+    location: 'Vijay Nagar, indore',
     image: require("../assets/images/RecentlyAdded/image-3.jpg"),
   },
   {
@@ -87,6 +90,7 @@ const recentlyAddedData = [
     price: "10,000",
     caption: "1 BHK independent house",
     size: "1500 sq.ft.",
+    location: 'Vijay Nagar, indore',
     image: require("../assets/images/RecentlyAdded/image-4.jpg"),
   },
 ];

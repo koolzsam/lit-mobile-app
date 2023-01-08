@@ -8,7 +8,7 @@ const Divider = () => {
         width: "100%",
         height: 1,
         backgroundColor: "#e3e3e3",
-        marginVertical: 20,
+        marginVertical: 10,
       }}
     />
   );

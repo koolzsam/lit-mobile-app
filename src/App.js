@@ -16,7 +16,8 @@ export const theme = {
   myOwnProperty: true,
   // Specify custom property in nested object
   colors: {
-    primary: 'purple',
+    white: '#ffffff',
+    primary: '#025A63',
     secondary: 'orange',
     textDark: '#252525'
   },

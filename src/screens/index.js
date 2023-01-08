@@ -4,3 +4,4 @@ export * from './chat';
 export * from './bookmark';
 export * from './DetailsScreen';
 export * from './SearchScreen';
+export * from './SearchResultScreen';

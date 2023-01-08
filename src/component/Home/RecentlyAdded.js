@@ -7,7 +7,7 @@ import { theme } from "@/App";
 const RecentlyAdded = ({ props }) => {
   const { data, isLoading } = useRecentlyAddedProperties();
   return (
-    <View style={{ marginTop: 20, marginBottom: 10 }}>
+    <View style={{ marginTop: 20, marginBottom: 20 }}>
       {/* Tile Header */}
       <View
         style={{
@@ -36,6 +36,7 @@ const RecentlyAdded = ({ props }) => {
                 key={item.id}
                 style={{
                   marginRight: 10,
+                  width: 160,
                 }}
               >
                 <TouchableOpacity rippleColor="rgba(120, 0, 0, .32)"
@@ -47,9 +48,9 @@ const RecentlyAdded = ({ props }) => {
                     source={item.image}
                     resizeMode="cover"
                     style={{
-                      width: 187,
-                      height: 110,
-                      borderRadius: 10,
+                      width: '100%',
+                      height: 100,
+                      borderRadius: 6,
                       justifyContent: "flex-end",
                     }}
                   />
@@ -61,12 +62,12 @@ const RecentlyAdded = ({ props }) => {
                     <View
                       style={{ flexDirection: "row", alignItems: "center" }}
                     >
-                      <INRSignSolidSVG width={16} height={16} fill="black" />
+                      <INRSignSolidSVG width={14} height={14} fill="black" />
                       <Text
                         style={{
                           color: "#000",
                           fontWeight: "800",
-                          fontSize: 16,
+                          fontSize: 14,
                           marginLeft: 4,
                         }}
                       >
@@ -75,17 +76,18 @@ const RecentlyAdded = ({ props }) => {
                       <Text
                         style={{
                           color: "#000",
-                          fontSize: 16,
+                          fontSize: 14,
                         }}
                       >
                         Month
                       </Text>
                     </View>
+
                     <View style={{ marginTop: 6 }}>
                       <Text
                         style={{
                           color: "#000",
-                          fontSize: 16,
+                          fontSize: 14,
                         }}
                       >
                         {item.caption}
@@ -93,10 +95,18 @@ const RecentlyAdded = ({ props }) => {
                       <Text
                         style={{
                           color: "#000",
-                          fontSize: 16,
+                          fontSize: 14,
                         }}
                       >
                         {item.size}
+                      </Text>
+                      <Text
+                        style={{
+                          color: "#000",
+                          fontSize: 14,
+                        }}
+                      >
+                        {item.location}
                       </Text>
                     </View>
                   </View>

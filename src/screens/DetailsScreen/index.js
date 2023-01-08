@@ -5,14 +5,16 @@ import {
   Dimensions,
   TouchableOpacity,
   ScrollView,
+  StyleSheet
 } from "react-native";
+import BackArrowIcon from '@/assets/icons/back-arrow-icon.svg';
 import React from "react";
 import Divider from "@/component/Divider";
 import HeaderTitle from "@/component/HeaderTitle";
 import MapPinSVG from '@/assets/icons/map-pin.svg';
 import { theme } from "@/App";
 
-export const DetailsScreen = () => {
+export const DetailsScreen = ({ navigation }) => {
   const detailarray = [
     {
       type: "Layout",
@@ -57,6 +59,15 @@ export const DetailsScreen = () => {
   return (
     <View style={{ flex: 1 }}>
       <ScrollView>
+        {/* Header */}
+        <View style={styles.header}>
+          <TouchableOpacity onPress={() => { navigation.goBack() }} style={styles.headerBtnStyle}>
+            <View>
+              <Text><BackArrowIcon width={20} height={22} color="#000000" /></Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+
         <View>
           <Image
             source={require("@/assets/images/RecentlyAdded/image-1.jpg")}
@@ -136,9 +147,10 @@ export const DetailsScreen = () => {
                 marginTop: 20,
               }}
             >
-              {detailarray.map((item) => {
+              {detailarray.map((item, i) => {
                 return (
                   <View
+                    key={i}
                     style={{
                       flexDirection: "row",
                       justifyContent: "space-between",
@@ -171,9 +183,10 @@ export const DetailsScreen = () => {
                 marginTop: 20,
               }}
             >
-              {amenitiesarray.map((item) => {
+              {amenitiesarray.map((item, i) => {
                 return (
                   <View
+                    key={i}
                     style={{
                       flexDirection: "row",
                       justifyContent: "space-between",
@@ -219,3 +232,21 @@ export const DetailsScreen = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  header: {
+    padding: 20,
+    position: 'absolute',
+    zIndex: 9
+  },
+  headerBtnStyle: {
+    width: 44,
+    height: 44,
+    backgroundColor: '#fff',
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#fff',
+  }
+})

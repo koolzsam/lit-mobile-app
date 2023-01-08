@@ -1,6 +1,7 @@
 import {
   View,
   ScrollView,
+  StatusBar,
 } from "react-native";
 import React from "react";
 import SelectProperties from "@/component/Home/SelectProperties";
@@ -12,7 +13,7 @@ import UserGreetings from "@/component/Home/UserGreetings";
 export const Home = (props) => {
   return (
     <ScrollView>
-      <View style={{ flex: 1, marginTop: 60, paddingHorizontal: 20 }}>
+      <View style={{ flex: 1, marginTop: 40, paddingHorizontal: 20 }}>
         {/* User Greetings */}
         <UserGreetings />
 
