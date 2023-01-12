@@ -14,8 +14,8 @@ export const Root = () => {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-        gestureEnabled: false,
-        animation: 'none',
+        // gestureEnabled: false,
+        // animation: 'none',
       }}
     >
       {status === 'signOut' ? (

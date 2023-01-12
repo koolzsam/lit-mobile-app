@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from "react";
 
-import { BookmarkScreen, Home, ChatScreen, PropertyDetails } from "@/screens";
+import { BookmarkScreen, Home, ChatScreen, DetailsScreen, SearchScreen, SearchResultScreen } from "@/screens";
 import HomeSolidSVG from '@/assets/icons/home-solid.svg';
 import ChatSVG from '@/assets/icons/chat.svg';
 import BookmarkSVG from '@/assets/icons/bookmark.svg';
@@ -14,18 +14,26 @@ export const HomeStack = () => {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-        gestureEnabled: false,
-        animation: 'none',
+        // gestureEnabled: false,
+        // animation: 'none',
       }}
     >
-      <Stack.Screen 
-        name="HomeScreen" 
+      <Stack.Screen
+        name="HomeScreen"
         component={Home}
-        options={{ headerShown: false }} />
-      <Stack.Screen 
-        name="PropertyDetailsScreen" 
-        component={PropertyDetails}
-        options={{ headerShown: false }} />
+      />
+      <Stack.Screen
+        name="DetailsScreen"
+        component={DetailsScreen}
+      />
+      <Stack.Screen
+        name="SearchScreen"
+        component={SearchScreen}
+      />
+      <Stack.Screen
+        name="SearchResultScreen"
+        component={SearchResultScreen}
+      />
     </Stack.Navigator>
   );
 };
@@ -37,26 +45,26 @@ const tabs = [
     name: "Home",
     component: HomeStack,
     label: "Home",
-    icon: () => (<HomeSolidSVG width={20} height={20} fill="black"/>),
+    icon: () => (<HomeSolidSVG width={20} height={20} fill="black" />),
   },
   {
     name: "Bookmarks",
     component: BookmarkScreen,
     label: "Bookmarks",
-    icon: () => (<BookmarkSVG viewBox="-25 -25 95 95" fill="black"/>),
+    icon: () => (<BookmarkSVG viewBox="-25 -25 95 95" fill="black" />),
   },
   {
     name: "Chat",
     component: ChatScreen,
     label: "Chat",
-    icon: () => (<ChatSVG viewBox="-25 -25 95 95" fill="black"/>),
+    icon: () => (<ChatSVG viewBox="-25 -25 95 95" fill="black" />),
   }
 ];
 
 export const TabNavigator = () => {
   return (
     <Tab.Navigator>
-      <Tab.Group 
+      <Tab.Group
         screenOptions={{
           headerShown: false,
         }}
