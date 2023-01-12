@@ -8,6 +8,7 @@ import Animated, {
   useAnimatedProps,
   runOnJS,
 } from 'react-native-reanimated';
+import { SliderTrack } from './style';
 
 const ATextInput = Animated.createAnimatedComponent(TextInput);
 const WIDTH = Dimensions.get('window').width - 40;
@@ -129,7 +130,7 @@ const RangeSlider = ({ min = 0, max = 100, steps = 1, onValueChange }) => {
             animatedProps={animatedLabel2}
           />
         </View>
-        <View style={styles.track} />
+        <SliderTrack />
         <Animated.View style={styleLine} />
         <View>
           <PanGestureHandler onGestureEvent={gestureHandler1}>
@@ -156,16 +157,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     paddingHorizontal: 20,
     paddingVertical: 10,
-  },
-  title: {
-    color: '#777',
-    fontSize: 12,
-  },
-
-  track: {
-    height: 4,
-    backgroundColor: '#025A6333',
-    borderRadius: 3,
   },
   labelsContainer: {
     width: WIDTH,

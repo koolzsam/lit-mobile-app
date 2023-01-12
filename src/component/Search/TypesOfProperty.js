@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, Button } from 'react-native'
 import React from 'react'
-import { theme } from '@/App'
+import { theme } from '@/core/theme';
 
 const TypesOfProperty = () => {
   const [value, setValue] = React.useState('first');

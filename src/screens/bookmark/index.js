@@ -1,4 +1,4 @@
-import { theme } from '@/App';
+import { theme } from '@/core/theme';
 import React from 'react';
 import { View, Text } from 'react-native';
 

@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native";
 import React from "react";
 import INRSignSolidSVG from '@/assets/icons/inr-sign-solid.svg';
 import { useRecentlyAddedProperties } from "@/api";
-import { theme } from "@/App";
+import { theme } from "@/core/theme";
 
 const RecentlyAdded = ({ props }) => {
   const { data, isLoading } = useRecentlyAddedProperties();

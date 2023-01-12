@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity, TextInput, ScrollView } from 'react-native'
-import { theme } from '@/App';
+import { theme } from '@/core/theme';
 import { useFilter } from '@/core';
 import RangeSlider from '@/component/RangeSlider';
 import Divider from '@/component/Divider';

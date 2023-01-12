@@ -1,13 +1,13 @@
-import { View, Text, StyleSheet } from 'react-native'
-import React from 'react'
-import { theme } from '@/App'
+import { View, Text, StyleSheet } from 'react-native';
+import React from 'react';
+import { theme } from '@/core/theme';
 
 const PriceRange = () => {
   return (
     <View style={styles.conatiner}>
       <Text style={styles.title}>Price Range</Text>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -20,6 +20,6 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     color: theme.colors.textDark
   }
-})
+});
 
-export default PriceRange
+export default PriceRange;
