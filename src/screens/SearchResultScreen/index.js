@@ -4,7 +4,7 @@ import { styles } from '../SearchScreen';
 
 import INRSignSolidSVG from '@/assets/icons/inr-sign-solid.svg';
 import { useSearchResult } from '@/api/properties/use-search-result';
-import { theme } from '@/App';
+import { theme } from '@/core/theme';
 
 // Icon
 import BackArrowIcon from '@/assets/icons/back-arrow-icon.svg';

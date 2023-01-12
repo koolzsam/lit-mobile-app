@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native";
 import React from "react";
 import { usePropertyLocations } from "@/api";
-import { theme } from "@/App";
+import { theme } from "@/core/theme";
 
 const ByLocation = () => {
   const { data, isLoading } = usePropertyLocations();

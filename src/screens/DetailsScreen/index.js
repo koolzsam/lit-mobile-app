@@ -12,7 +12,7 @@ import React from "react";
 import Divider from "@/component/Divider";
 import HeaderTitle from "@/component/HeaderTitle";
 import MapPinSVG from '@/assets/icons/map-pin.svg';
-import { theme } from "@/App";
+import { theme } from '@/core/theme';
 
 export const DetailsScreen = ({ navigation }) => {
   const detailarray = [

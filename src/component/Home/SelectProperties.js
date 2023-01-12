@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import React from "react";
 import { usePropertyCategories } from "@/api";
-import { theme } from "@/App";
+import { theme } from "@/core/theme";
 
 const SelectProperties = () => {
   const { data, isLoading } = usePropertyCategories();
